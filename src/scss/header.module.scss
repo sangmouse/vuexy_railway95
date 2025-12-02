@@ -1,0 +1,40 @@
+.header {
+  background: #fff;
+  margin: 30px auto;
+  max-width: 1440px;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 16px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  &_msg {
+    font-size: 14px;
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+
+  &_btn {
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    span {
+      background-image: url(../../public/icon/ic-logout.png);
+      background-size: contain;
+      background-position: center;
+      display: inline-flex;
+      width: 23px;
+      height: 23px;
+      transform: rotate(90deg);
+    }
+  }
+}

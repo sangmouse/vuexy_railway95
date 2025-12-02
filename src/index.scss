@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background : #f8f7fa;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus-visible{
+  outline: none;
+}
+
