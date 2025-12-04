@@ -37,3 +37,8 @@
   - authentication:
     - check nếu trong local storage có data account => vẫn cho phép truy cập home page
     - nếu ko có account trong local storage => điều hướng về sign-in page
+
+2. sign out
+
+- click sign out => xóa user trong local storage
+- redirect về trang /sign-in
