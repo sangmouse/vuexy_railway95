@@ -7,6 +7,7 @@ import LayoutRoot from "./layout/LayoutRoot";
 import SignInPage from "./pages/SignInPage";
 import UserList from "./components/UserList";
 import UserDetail from "./components/UserDetail";
+import UserForm from "./components/UserForm";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "user/:id",
         element: <UserDetail />,
+      },
+      {
+        path: "/user/create",
+        element: <UserForm />,
       },
     ],
   },
