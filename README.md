@@ -42,3 +42,8 @@
 
 - click sign out => xóa user trong local storage
 - redirect về trang /sign-in
+
+3.
+
+- npm install
+- npm start
