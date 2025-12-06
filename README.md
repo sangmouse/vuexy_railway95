@@ -42,8 +42,14 @@
 
 - click sign out => xóa user trong local storage
 - redirect về trang /sign-in
+- check nếu sửa url về / => đẩy về /sign-in
 
 3.
 
 - npm install
 - npm start
+
+4. users
+
+- mock api : https://www.npmjs.com/package/json-server
+- npm i json-server

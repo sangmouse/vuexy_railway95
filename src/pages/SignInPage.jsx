@@ -45,7 +45,7 @@ export default function SignInPage() {
   }
 
   useEffect(function () {
-    if (!!window.localStorage.getItem("user")) {
+    if (window.localStorage.getItem("user")) {
       navigate("/");
     }
   }, []);

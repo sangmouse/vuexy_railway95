@@ -1,0 +1,64 @@
+{
+   "users": [
+      {
+         "user_id": "a9f3b1c2d4e5f6789012",
+         "department": "vti",
+         "city": "hn",
+         "avatar": "https://i.pravatar.cc/150?img=1"
+      },
+      {
+         "user_id": "b7c8d9e0f1a2b3456789",
+         "department": "cmc",
+         "city": "hcm",
+         "avatar": "https://i.pravatar.cc/150?img=2"
+      },
+      {
+         "user_id": "c123d456e789f0123456",
+         "department": "fpt",
+         "city": "da-nang",
+         "avatar": "https://i.pravatar.cc/150?img=3"
+      },
+      {
+         "user_id": "d789e012f345a6789012",
+         "department": "samsung",
+         "city": "quy-nhon",
+         "avatar": "https://i.pravatar.cc/150?img=4"
+      },
+      {
+         "user_id": "e456f789a012b3456789",
+         "department": "vti",
+         "city": "hcm",
+         "avatar": "https://i.pravatar.cc/150?img=5"
+      },
+      {
+         "user_id": "f012a345b678c9012345",
+         "department": "cmc",
+         "city": "hn",
+         "avatar": "https://i.pravatar.cc/150?img=6"
+      },
+      {
+         "user_id": "g678h901i234j5678901",
+         "department": "fpt",
+         "city": "quy-nhon",
+         "avatar": "https://i.pravatar.cc/150?img=7"
+      },
+      {
+         "user_id": "h234i567j890k1234567",
+         "department": "samsung",
+         "city": "da-nang",
+         "avatar": "https://i.pravatar.cc/150?img=8"
+      },
+      {
+         "user_id": "i890j123k456l7890123",
+         "department": "vti",
+         "city": "hn",
+         "avatar": "https://i.pravatar.cc/150?img=9"
+      },
+      {
+         "user_id": "j456k789l012m3456789",
+         "department": "cmc",
+         "city": "hcm",
+         "avatar": "https://i.pravatar.cc/150?img=10"
+      }
+   ]
+}
