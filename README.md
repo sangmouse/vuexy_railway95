@@ -53,3 +53,5 @@
 
 - mock api : https://www.npmjs.com/package/json-server
 - npm i json-server
+- npm i concurrently
+- http://localhost:8080/users
