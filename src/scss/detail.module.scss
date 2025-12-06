@@ -6,6 +6,12 @@
   border-radius: 6px;
   padding: 32px 16px;
 
+  &_avatar {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+  }
+
   ul {
     list-style: none;
     margin: 0;
