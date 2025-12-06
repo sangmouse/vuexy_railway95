@@ -55,3 +55,19 @@
 - npm i json-server
 - npm i concurrently
 - http://localhost:8080/users
+
+* hiển thị danh sách users:
+  - gọi api để hiển thị danh sách user và hiển thị các thông tin tương ứng
+    trong bảng
+    - method : GET /users
+
+- view thông tin chi tiết của từng user khi click vào icon view detail
+
+* method api : GET /users/:id
+
+- trong page detail : gọi api để get thông tin user tương ứng
+  .
+
+* xóa user : click button để xóa user
+
+- DELETE /users/:id
