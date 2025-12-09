@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import s from "../scss/list.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function UserList() {
   const [userList, setUserList] = useState([]);
+  const navigate = useNavigate();
 
   async function fetchList() {
     const query = await fetch("http://localhost:8080/users");
@@ -18,6 +19,10 @@ export default function UserList() {
     await fetchList();
   }
 
+  function onAddNew() {
+    navigate("/user/create");
+  }
+
   useEffect(function () {
     fetchList();
   }, []);
@@ -26,7 +31,7 @@ export default function UserList() {
     <div className={s.list}>
       <div className={s.list_header}>
         <h1>Data table with users</h1>
-        <button>
+        <button onClick={onAddNew}>
           <img src="icon/ic-add-more.png" alt="" /> Create New User
         </button>
       </div>
