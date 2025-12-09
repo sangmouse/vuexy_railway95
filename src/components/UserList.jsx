@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import s from "../scss/list.module.scss";
 import { Link, useNavigate } from "react-router-dom";
+import { cities, departments } from "../constant";
 
 export default function UserList() {
   const [userList, setUserList] = useState([]);
@@ -37,8 +38,8 @@ export default function UserList() {
       </div>
       <table>
         <tr>
+          <th>ID</th>
           <th>Username</th>
-          <th>Avatar</th>
           <th>Department</th>
           <th>City</th>
           <th>Actions</th>
@@ -46,17 +47,17 @@ export default function UserList() {
         {userList.map((item) => {
           return (
             <tr key={item.id}>
+              <td>{item.id}</td>
               <td>{item.username}</td>
               <td>
-                <img src={item.avatar} alt="" />
+                {departments.find((ele) => ele.value === item.department).label}
               </td>
-              <td>{item.department}</td>
-              <td>{item.city}</td>
+              <td>{cities.find((ele) => ele.value === item.city).label}</td>
               <td>
                 <Link to={`user/${item.id}`}>
                   <img src="icon/ic-view.png" alt="" />
                 </Link>
-                <Link>
+                <Link to={`/user/edit/${item.id}`}>
                   <img src="icon/ic-edit.png" alt="" />
                 </Link>
                 <button onClick={() => onRemove(item.id)}>
@@ -67,9 +68,7 @@ export default function UserList() {
           );
         })}
       </table>
-      <div className={s.list_footer}>
-        <p>Showing 1 to 10 of 100 entries</p>
-      </div>
+      <div className={s.list_footer}></div>
     </div>
   );
 }

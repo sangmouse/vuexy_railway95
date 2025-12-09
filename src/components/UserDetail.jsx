@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import s from "../scss/detail.module.scss";
 import { useEffect, useState } from "react";
+import { cities, departments } from "../constant";
 
 export default function UserDetail() {
   const params = useParams();
@@ -25,24 +26,30 @@ export default function UserDetail() {
       <hr />
       <ul>
         <li>
+          <img src="/icon/ic-setting.png" alt="" />
+          <p>User ID : </p>
+          <p>{userDetail?.id}</p>
+        </li>
+        <li>
           <img src="/icon/ic-avatar.png" alt="" />
           <p>User Name : </p>
           <p>{userDetail?.username}</p>
         </li>
-        <li>
-          <img src="/icon/ic-setting.png" alt="" />
-          <p>Avatar : </p>
-          <img className={s.detail_avatar} src={userDetail?.avatar}></img>
-        </li>
+
         <li>
           <img src="/icon/ic-globe.png" alt="" />
           <p>Department : </p>
-          <p>{userDetail?.department}</p>
+          <p>
+            {
+              departments.find((ele) => ele.value === userDetail?.department)
+                ?.label
+            }
+          </p>
         </li>
         <li>
           <img src="/icon/ic-city.png" alt="" />
           <p>City : </p>
-          <p>{userDetail?.city}</p>
+          <p>{cities.find((ele) => ele.value === userDetail?.city)?.label}</p>
         </li>
       </ul>
     </div>

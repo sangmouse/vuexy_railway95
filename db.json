@@ -1,82 +1,45 @@
 {
   "users": [
     {
-      "id": "c123d456e789f0123456",
-      "username": "Quang Pham",
-      "department": "fpt",
-      "city": "da-nang",
-      "avatar": "https://i.pravatar.cc/150?img=13"
-    },
-    {
       "id": "e456f789a012b3456789",
       "username": "Hoang Vu",
       "department": "vti",
-      "city": "hcm",
-      "avatar": "https://i.pravatar.cc/150?img=15"
-    },
-    {
-      "id": "f012a345b678c9012345",
-      "username": "Anh Dao",
-      "department": "cmc",
-      "city": "hn",
-      "avatar": "https://i.pravatar.cc/150?img=16"
+      "city": "hcm"
     },
     {
       "id": "g678h901i234j5678901",
       "username": "Khanh Ngoc",
       "department": "fpt",
-      "city": "quy-nhon",
-      "avatar": "https://i.pravatar.cc/150?img=17"
+      "city": "quy-nhon"
     },
     {
       "id": "h234i567j890k1234567",
       "username": "Bao Lam",
-      "department": "samsung",
-      "city": "da-nang",
-      "avatar": "https://i.pravatar.cc/150?img=18"
+      "department": "cmc",
+      "city": "hn"
     },
     {
       "id": "i890j123k456l7890123",
       "username": "Trang Ho",
       "department": "vti",
-      "city": "hn",
-      "avatar": "https://i.pravatar.cc/150?img=19"
+      "city": "hn"
     },
     {
       "id": "j456k789l012m3456789",
       "username": "Duc Nguyen",
-      "department": "cmc",
-      "city": "hcm",
-      "avatar": "https://i.pravatar.cc/150?img=20"
-    },
-    {
-      "id": "Q3YaSFGS_V2NeIGm6GkaT",
-      "username": "dao tuan anh",
-      "department": "fpt",
+      "department": "vti",
       "city": "hcm"
     },
     {
-      "id": "GIp_8bYHrPG1RM5GGc3G2",
-      "username": "tuan anh",
+      "id": "JcjNk4TOc5d-rySqW_c_Y",
+      "username": "Minh Quang",
       "department": "vti",
-      "city": "hn"
+      "city": "da-nang"
     },
     {
-      "id": "4BmBD5VYv36cucEncZrHM",
-      "username": "tuan anh",
-      "department": "vti",
-      "city": "hn"
-    },
-    {
-      "id": "Xh-o5Z07LpwOytC2pG4eg",
-      "username": "tuan anh",
-      "department": "vti",
-      "city": "hn"
-    },
-    {
-      "id": "EyGX9i7ZXvEXlhTqC1oek",
-      "username": "tuan anh",
-      "department": "vti",
+      "id": "GW6jdc0bQ64-RRseqx8gx",
+      "username": "Chu Luan",
+      "department": "fpt",
       "city": "hn"
     }
   ]

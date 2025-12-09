@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import s from "../scss/user-form.module.scss";
 import { nanoid } from "nanoid";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function UserForm() {
   const [user, setUser] = useState({
@@ -12,6 +12,8 @@ export default function UserForm() {
   const [message, setMessage] = useState("");
   const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
+  const params = useParams();
+  let timeoutId = null;
 
   function onChangeUsername(event) {
     setUser({
@@ -34,26 +36,51 @@ export default function UserForm() {
   }
 
   async function onSubmit() {
+    clearTimeout(timeoutId);
     if (!user.username.trim()) {
       setMessage("Username is required!");
       return;
     }
 
-    const payload = {
-      id: nanoid(),
-      username: user.username.trim(),
-      department: user.department,
-      city: user.city,
-    };
+    if (!params.id) {
+      const payload = {
+        id: nanoid(),
+        username: user.username.trim(),
+        department: user.department,
+        city: user.city,
+      };
 
-    const query = await fetch("http://localhost:8080/users", {
-      method: "POST",
-      body: JSON.stringify(payload),
-    });
+      const query = await fetch("http://localhost:8080/users", {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
 
-    if (query.ok) {
-      setMessage("Created successfully!");
-      setIsSubmit(true);
+      if (query.ok) {
+        setMessage("Created successfully!");
+        setIsSubmit(true);
+        timeoutId = setTimeout(function () {
+          navigate("/");
+        }, 1000);
+      }
+    } else {
+      const payload = {
+        username: user.username.trim(),
+        department: user.department,
+        city: user.city,
+      };
+
+      const query = await fetch(`http://localhost:8080/users/${params.id}`, {
+        method: "PATCH",
+        body: JSON.stringify(payload),
+      });
+
+      if (query.ok) {
+        setMessage("Updated successfully!");
+        setIsSubmit(true);
+        timeoutId = setTimeout(function () {
+          navigate("/");
+        }, 1000);
+      }
     }
   }
 
@@ -66,11 +93,28 @@ export default function UserForm() {
     navigate("/");
   }
 
+  async function fetchDetail() {
+    const query = await fetch(`http://localhost:8080/users/${params.id}`);
+    const data = await query.json();
+    setUser({
+      ...user,
+      username: data.username,
+      department: data.department,
+      city: data.city,
+    });
+  }
+
+  useEffect(function () {
+    fetchDetail();
+  }, []);
+
   return (
     <div className={s["form"]}>
       <div className={s["form_container"]}>
         <section>
-          <h1 className={s["form_heading"]}>Create New User</h1>
+          <h1 className={s["form_heading"]}>
+            {params.id ? "Update User" : "Create New User"}
+          </h1>
         </section>
         <section>
           <div>

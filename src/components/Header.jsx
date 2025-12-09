@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
+  const userLogin = JSON.parse(localStorage.getItem("user"));
 
   function onSignOut() {
     localStorage.removeItem("user");
@@ -19,7 +20,7 @@ export default function Header() {
   return (
     <div className={s.header}>
       <p className={s.header_msg}>
-        Welcome, <span>John</span>
+        Welcome, <span>{userLogin.username}</span>
       </p>
       <span>|</span>
       <button className={s.header_btn} onClick={onSignOut}>
