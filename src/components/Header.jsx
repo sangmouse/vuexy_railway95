@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <div className={s.header}>
       <p className={s.header_msg}>
-        Welcome, <span>{userLogin.username}</span>
+        Welcome, <span>{userLogin?.username}</span>
       </p>
       <span>|</span>
       <button className={s.header_btn} onClick={onSignOut}>

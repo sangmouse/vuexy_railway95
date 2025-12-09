@@ -3,7 +3,7 @@
     {
       "id": "e456f789a012b3456789",
       "username": "Hoang Vu",
-      "department": "vti",
+      "department": "cmc",
       "city": "hcm"
     },
     {
@@ -21,13 +21,13 @@
     {
       "id": "i890j123k456l7890123",
       "username": "Trang Ho",
-      "department": "vti",
+      "department": "fpt",
       "city": "hn"
     },
     {
       "id": "j456k789l012m3456789",
       "username": "Duc Nguyen",
-      "department": "vti",
+      "department": "samsung",
       "city": "hcm"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "GW6jdc0bQ64-RRseqx8gx",
       "username": "Chu Luan",
-      "department": "fpt",
+      "department": "samsung",
       "city": "hn"
     }
   ]
